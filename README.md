@@ -1,2 +1,10 @@
-# IDWeb
-Mi primer repositorio
+#Introducción a Desarrollo Web
+#Profesor 
+-Rene Alonso Nieto Valencia
+#Estudiante
+-André Nicolás Chacondori Mayta
+# Introducción a Desarrollo Web
+## Profesor 
+- Rene Alonso Nieto Valencia
+## Estudiante
+- André Nicolás Chacondori Mayta
