@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Portal Académico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Site navigation menu -->
+    <ul class="navbar">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="author.html">Autor</a></li>
+        <li><a href="system.html">Ingeniería de Sistemas</a></li>
+        <li><a href="w3c.html">W3C</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+    </ul>
+
+    <!-- Main content -->
+    <main>
+        <article>
+            <h2>Contacto</h2>
+            <p>Si tienes alguna consulta o comentario, por favor completa el siguiente formulario:</p>
+
+            <form action="#" method="POST">
+                <p>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </p>
+
+                <p>
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@unsa.edu.pe" required>
+                </p>
+
+                <p>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar mensaje</button>
+                </p>
+            </form>
+        </article>
+    </main>
+
+</body>
+</html>
