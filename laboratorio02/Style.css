@@ -14,3 +14,37 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
+.contenedor {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contenedor h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.subtitulo {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #34495e;
+    font-size: 14px;
+    padding: 0 5px;
+}
