@@ -13,3 +13,41 @@
         <p class="subtitulo">Por favor completa tus datos para el acceso al sistema.</p>
 
         <form action="/procesar" method="POST">
+            <!-- Datos Personales -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ana Torres">
+                </div>
+
+                <div class="campo">
+                    <label for="codigo">Código de estudiante</label>
+                    <input type="text" id="codigo" name="codigo" required pattern="[0-9]{8}" placeholder="8 dígitos numéricos" title="Deben ser exactamente 8 números">
+                </div>
+
+                <div class="campo">
+                    <label for="fnacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fnacimiento" name="fnacimiento" min="1950-01-01" max="2008-12-31" required>
+                </div>
+
+                <div class="campo">
+                    <label for="carrera">Carrera</label>
+                    <select id="carrera" name="carrera" required>
+                        <option value="" disabled selected>Elige una opción...</option>
+                        <option value="sistemas">Ingeniería de Sistemas</option>
+                        <option value="software">Ingeniería de Software</option>
+                        <option value="ciencias">Ciencia de la Computación</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Turno</label>
+                    <div class="opciones-radio">
+                        <label><input type="radio" name="turno" value="mañana" required> Mañana</label>
+                        <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                        <label><input type="radio" name="turno" value="noche"> Noche</label>
+                    </div>
+                </div>
+            </fieldset>
