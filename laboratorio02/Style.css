@@ -48,3 +48,72 @@ legend {
     font-size: 14px;
     padding: 0 5px;
 }
+.campo {
+    margin-bottom: 12px;
+}
+
+.campo label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+    box-shadow: 0 0 4px rgba(41, 128, 185, 0.3);
+}
+
+.opciones-radio {
+    display: flex;
+    gap: 15px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.opciones-radio label,
+.checkbox label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.boton-enviar {
+    width: 100%;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.boton-enviar:hover {
+    background: #219653;
+}
+
+.boton-enviar:active {
+    background: #1e8449;
+}
