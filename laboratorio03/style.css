@@ -39,16 +39,12 @@ body {
         text-align: left;
     }
 }
-/* ================================================================= */
-/* CATÁLOGO DE CURSOS (Diseño CSS Grid Responsive - Commit 15)       */
-/* ================================================================= */
 .curso-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna por defecto en móviles */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
 }
 
-/* En tablets (desde 576px) */
 @media (min-width: 576px) {
     .curso-grid {
         grid-template-columns: repeat(2, 1fr);
