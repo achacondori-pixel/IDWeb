@@ -8,3 +8,9 @@ body {
     margin-bottom: 10px;
     border-radius: 4px;
 }
+
+.tachado { 
+    text-decoration: line-through; 
+    color: gray; 
+    background-color: #f8f9fa;
+}
