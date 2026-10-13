@@ -16,6 +16,7 @@ form.addEventListener('submit', (e) => {
 
     alertas.innerHTML = '';
 
+    // validaciones
     if (!tit || !cur || !fec) {
         alertas.innerHTML = '<div class="alert alert-danger p-2">Completa todos los campos</div>';
         return;
@@ -40,4 +41,28 @@ form.addEventListener('submit', (e) => {
 });
 
 function render() {
+    lista.innerHTML = '';
+
+    let arr = tareas;
+
+    arr.forEach(t => {
+        const item = document.createElement('div');
+        item.className = 'tarea-box';
+        
+        if (t.completada) {
+            item.classList.add('tachado');
+        }
+
+        item.innerHTML = `
+            <h5>${t.titulo} <small class="text-muted">(${t.curso})</small></h5>
+            <p style="margin-bottom: 5px;"><strong>Para:</strong> ${t.fechaEntrega}</p>
+            
+            <button class="btn btn-sm ${t.completada ? 'btn-secondary' : 'btn-success'}" onclick="toggle(${t.id})">
+                ${t.completada ? 'Desmarcar' : 'Completar'}
+            </button>
+            <button class="btn btn-sm btn-danger" onclick="borrar(${t.id})">Eliminar</button>
+        `;
+        
+        lista.appendChild(item);
+    });
 }
