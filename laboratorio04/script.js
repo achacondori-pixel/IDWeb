@@ -1,4 +1,4 @@
-let tareas = [];
+let tareas = JSON.parse(localStorage.getItem('tareas')) || [];
 let filtro = 'todas';
 
 const form = document.getElementById('form-tareas');
@@ -16,7 +16,6 @@ form.addEventListener('submit', (e) => {
 
     alertas.innerHTML = '';
 
-    // validaciones
     if (!tit || !cur || !fec) {
         alertas.innerHTML = '<div class="alert alert-danger p-2">Completa todos los campos</div>';
         return;
@@ -36,6 +35,7 @@ form.addEventListener('submit', (e) => {
         completada: false
     });
 
+    guardar(); 
     render();
     form.reset();
 });
@@ -44,6 +44,9 @@ function render() {
     lista.innerHTML = '';
 
     let arr = tareas;
+    
+    if (filtro === 'pendientes') arr = tareas.filter(t => !t.completada);
+    if (filtro === 'completadas') arr = tareas.filter(t => t.completada);
 
     arr.forEach(t => {
         const item = document.createElement('div');
@@ -70,10 +73,22 @@ function render() {
 function toggle(id) {
     let t = tareas.find(x => x.id === id);
     if (t) t.completada = !t.completada;
+    guardar(); 
     render();
 }
 
 function borrar(id) {
     tareas = tareas.filter(x => x.id !== id);
+    guardar(); 
     render();
+}
+
+function setFiltro(f) {
+    filtro = f;
+    render();
+}
+
+
+function guardar() {
+    localStorage.setItem('tareas', JSON.stringify(tareas));
 }
