@@ -66,3 +66,14 @@ function render() {
         lista.appendChild(item);
     });
 }
+
+function toggle(id) {
+    let t = tareas.find(x => x.id === id);
+    if (t) t.completada = !t.completada;
+    render();
+}
+
+function borrar(id) {
+    tareas = tareas.filter(x => x.id !== id);
+    render();
+}
